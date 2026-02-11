@@ -31,10 +31,10 @@ jobs:
 
       - name: Build APK
         run: |
-          flet build apk --verbose
+          flet build apk --permissions INTERNET --description "Zama App"
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: app-release
-          path: "**/*.apk"
+          path: build/app/outputs/flutter-apk/app-release.apk
