@@ -31,7 +31,7 @@ jobs:
 
       - name: Build APK
         run: |
-          flet build apk --permissions INTERNET --description "Zama App"
+          flet build apk --android-permissions android.permission.INTERNET --description "Zama App"
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
